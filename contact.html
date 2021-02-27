@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+header {
+    color: coral;
+    background: #fff;
+    padding: 1%;
+    margin: 1%;
+  /*   box-shadow: 0 8px 8px -8px black; */
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.topnav a {
+    color: coral;
+    background: #fff;
+    padding: 1%;
+    margin: 1%;
+    box-shadow: 0 8px 8px -8px black;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: coral;
+    color:#fff;
+  }
+    </style>
+</head>
+<body>
+    <script>
+        var header = document.createElement("header");
+        var img = document.createElement("img");
+        img.setAttribute("src","/images/logo.png");
+        img.setAttribute("alt","logo image");
+        img.setAttribute("width", "100px");
+        img.setAttribute("heigth","100px");
+        header.appendChild(img);
+        var content = document.createTextNode("Pizza Family Project");
+        header.appendChild(content);
+        document.body.append(header);
+    </script>
+        <div class="topnav">
+            <a class="active" href="/homepage.html">Home</a>
+            <a href="/index.html">Pizza</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/about.html">About</a>
+            </div>
+</body>
+</html>

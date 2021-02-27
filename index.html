@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <script>
+    var header = document.createElement("header");
+    var img = document.createElement("img");
+    img.setAttribute("src","/images/logo.png");
+    img.setAttribute("alt","logo image");
+    img.setAttribute("width", "100px");
+    img.setAttribute("heigth","100px");
+    header.appendChild(img);
+    var content = document.createTextNode("Pizza Family Project");
+    header.appendChild(content);
+    document.body.append(header);
+</script>
+    <div class="topnav">
+        <a class="active" href="/homepage.html">Home</a>
+        <a href="/index.html">Pizza</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/about.html">About</a>
+        </div>
+    
+    <script>
+        let model ={pizza:[
+         {
+             image:'/images/pizza1.png',
+             name:'Pizza Kid hub',
+         }, 
+         {
+             image:'/images/pizza2.png',
+             name:'Pizza Adult Hub',
+         },  
+         {
+             image:'/images/pizza3.png',
+             name:'Yellow Cab Pizza',
+         },  
+         {
+             image:'/images/pizza4.png',
+             name:'Seafood Pizza',
+         },  
+         {
+             image:'/images/pizza1.png',
+             name:'Pizza Kid hub',
+         },  
+         {
+             image:'/images/pizza1.png',
+             name:'Pizza Kid hub',
+         },  
+         {
+             image:'/images/pizza1.png',
+             name:'Pizza Kid hub',
+         },  
+         {
+             image:'/images/pizza1.png',
+             name:'Pizza Kid hub',
+         },    
+        ]};
+
+        var pro = model['pizza'];
+/* 
+        var header = document.createElement("header");
+        var img = document.createElement("img");
+        img.setAttribute("src","/images/logo.png");
+        img.setAttribute("alt","logo image");
+        img.setAttribute("width", "100px");
+        img.setAttribute("heigth","100px");
+        header.appendChild(img);
+        var content = document.createTextNode("Pizza Family Project");
+        header.appendChild(content);
+        document.body.append(header);
+ */
+         
+
+        var section = document.createElement("section");
+        section.classList.add("pizza");
+        document.body.appendChild(section);
+
+        for( var i=0; i < pro.length; i++ ){
+
+        var item = document.createElement("div");
+        item.classList.add("item");
+        section.append(item);
+        /* Pizza 1 */
+        var img = document.createElement("img");
+        img.setAttribute("src", pro[i].image);
+        img.setAttribute("alt", pro[i].name);
+        img.setAttribute("width", "155px");
+        img.setAttribute("heigth","312px");
+        item.append(img);
+
+        var details = document.createElement("div");
+        details.classList.add("details");
+        item.append(details);
+
+        var title = document.createElement("p");
+        var content = document.createTextNode(pro[i].name);
+        title.classList.add("title");
+        title.appendChild(content);
+        details.append(title);
+
+
+       /* 
+        var img = document.createElement("img");
+        img.setAttribute("src", "/images/pizza1.png");
+        img.setAttribute("alt", "Pizza1");
+        img.setAttribute("width", "155px");
+        img.setAttribute("heigth","312px");
+        item.append(img);
+
+        var details = document.createElement("div");
+        details.classList.add("details");
+        item.append(details);
+
+        var title = document.createElement("p");
+        var content = document.createTextNode("Crispy Thin Pizza ");
+        title.classList.add("title");
+        title.appendChild(content);
+        details.append(title); */
+        var button = document.createElement("button");
+        button.innerHTML = "Add to Cart"
+        details.append(button);
+        }
+    item1();
+    item1();
+    item1();
+    item1();
+
+    </script>
+</body>
+</html>

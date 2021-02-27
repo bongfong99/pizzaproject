@@ -1,0 +1,229 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+header {
+    color: coral;
+    background: #fff;
+    padding: 1%;
+    margin: 1%;
+  /*   box-shadow: 0 8px 8px -8px black; */
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.topnav a {
+    color: coral;
+    background: #fff;
+    padding: 1%;
+    margin: 1%;
+    box-shadow: 0 8px 8px -8px black;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: coral;
+    color:#fff;
+  }
+  .pizza{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    border: 1px solid #c6cacf;
+}
+.item:hover{
+    box-shadow: o 8px -8px #c6cacf;
+}
+.details{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin: 1%;
+}
+.title {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+button{
+    margin-top: 25px;
+    background: #6c757d;
+    color:#fff;
+    border-radius: 20px;
+    padding: 10px 5px;
+    border: 2px sold #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+    button:hover{
+        border:2px solid #6c757c;
+    }
+
+@media only screen and  (min-width: 350px) and (max-width: 480px){
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 96%;
+        margin: 1%;
+        padding: 1%;
+        text-align: center;
+        border: 1px solid #c6cacf;
+    }
+}
+@media only screen and  (min-width: 481px) and (max-width: 1025px){
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 96%;
+        margin: 1%;
+        padding: 1%;
+        text-align: center;
+        border: 1px solid #c6cacf;
+    }
+}
+    </style>
+</head>
+<body>
+    <script>
+        var header = document.createElement("header");
+        var img = document.createElement("img");
+        img.setAttribute("src","/images/logo.png");
+        img.setAttribute("alt","logo image");
+        img.setAttribute("width", "100px");
+        img.setAttribute("heigth","100px");
+        header.appendChild(img);
+        var content = document.createTextNode("Pizza Family Project");
+        header.appendChild(content);
+        document.body.append(header);
+    </script>
+        <div class="topnav">
+            <a class="active" href="/homepage.html">Home</a>
+            <a href="/index.html">Pizza</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/about.html">About</a>
+            </div>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext"></div>
+                  <img src="/images/red-pizza1.png"width="1440" height="450">
+                  <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="/images/red-pizza-2.png"width="1440" height="450">
+                    <div class="text">Caption Text</div>
+                  </div>
+                
+                  <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="/images/red-pizza-3.png"width="1440" height="450">
+                    <div class="text">Caption Text</div>
+                  </div>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+                
+                <script>
+                var slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+                </script>
+                
+            <script>
+                let model ={pizza:[
+                 {
+                     image:'/images/pizza1.png',
+                     name:'Pizza Kid hub',
+                 }, 
+                 {
+                     image:'/images/pizza2.png',
+                     name:'Pizza Adult Hub',
+                 },  
+                 
+                    ]};
+                    var pro = model['pizza'];
+                    
+        var section = document.createElement("section");
+        section.classList.add("pizza");
+        document.body.appendChild(section);
+
+        for( var i=0; i < pro.length; i++ ){
+            var item = document.createElement("div");
+        item.classList.add("item");
+        section.append(item);
+        /* Pizza 1 */
+        var img = document.createElement("img");
+        img.setAttribute("src", pro[i].image);
+        img.setAttribute("alt", pro[i].name);
+        img.setAttribute("width", "155px");
+        img.setAttribute("heigth","312px");
+        item.append(img);
+        var details = document.createElement("div");
+        details.classList.add("details");
+        item.append(details);
+
+        var title = document.createElement("p");
+        var content = document.createTextNode(pro[i].name);
+        title.classList.add("title");
+        title.appendChild(content);
+        details.append(title);
+        var button = document.createElement("button");
+        button.innerHTML = "Add to Cart"
+        details.append(button);
+        }
+    item1();
+    item1();
+    item1();
+    item1();
+
+    </script>
+
+</body>
+</html>

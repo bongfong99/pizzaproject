@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header {
+    color: coral;
+    background: #fff;
+    padding: 1%;
+    margin: 1%;
+  /*   box-shadow: 0 8px 8px -8px black; */
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.topnav a {
+    color: coral;
+    background: #fff;
+    padding: 1%;
+    margin: 1%;
+    box-shadow: 0 8px 8px -8px black;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: coral;
+    color:#fff;
+  }
+  
+  /* .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  } */
+.pizza{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    border: 1px solid #c6cacf;
+}
+.item:hover{
+    box-shadow: o 8px -8px #c6cacf;
+}
+.details{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin: 1%;
+}
+.title {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+button{
+    margin-top: 25px;
+    background: #6c757d;
+    color:#fff;
+    border-radius: 20px;
+    padding: 10px 5px;
+    border: 2px sold #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+    button:hover{
+        border:2px solid #6c757c;
+    }
+
+@media only screen and  (min-width: 350px) and (max-width: 480px){
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 96%;
+        margin: 1%;
+        padding: 1%;
+        text-align: center;
+        border: 1px solid #c6cacf;
+    }
+}
+@media only screen and  (min-width: 481px) and (max-width: 1025px){
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 96%;
+        margin: 1%;
+        padding: 1%;
+        text-align: center;
+        border: 1px solid #c6cacf;
+    }
+}
